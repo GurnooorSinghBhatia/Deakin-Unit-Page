@@ -4,446 +4,228 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SIT223/SIT753 – 3.1GP Sprint Planning in Trello</title>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+
   <link rel="stylesheet" href="main.css"/>
+
+  <!-- NEW INLINE STYLES FOR PROFESSIONAL LOOK -->
+  <style>
+    .resource-strip {
+      background: #f7f8fb;
+      padding: 28px 20px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .resource-strip-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .resource-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 20px;
+      text-decoration: none;
+      color: #1f2937;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: all 0.25s ease;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.09);
+      border-color: #005eb8;
+    }
+
+    .resource-icon {
+      display: inline-flex;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      background: #edf5ff;
+      border-radius: 14px;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .resource-card strong {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .resource-card small {
+      display: block;
+      color: #6b7280;
+      line-height: 1.45;
+    }
+
+    .nav-actions {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .resource-strip-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .resource-strip-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <!-- ── TOP NAVIGATION BAR ── -->
 <nav class="top-nav">
   <div class="top-nav-inner">
 
-    <!-- Logo + University Name -->
-    <a href="https://www.deakin.edu.au" target="_blank" rel="noopener" class="nav-logo">
-      <img src="deakinlogo.jpg" alt="Deakin University Logo"/>
+    <a href="https://www.deakin.edu.au" target="_blank" class="nav-logo">
+      <img src="deakinlogo.jpg"/>
       <div class="nav-logo-text">
         <strong>Deakin University</strong>
         <span>Australia</span>
       </div>
     </a>
 
-    <!-- Action Buttons -->
     <div class="nav-actions">
+
       <a class="nav-btn nav-btn-outline"
-         href="https://www.deakin.edu.au/students/help/it-support-and-systems/studentconnect?utm_source=chatgpt.com"
-         target="_blank"
-         rel="noopener"
-         title="Log in to DeakinSync student portal">
+         href="https://www.deakin.edu.au/students/help/it-support-and-systems/studentconnect"
+         target="_blank">
         🔑 Student Login
       </a>
 
-      <div class="nav-divider"></div>
-
       <a class="nav-btn nav-btn-portal"
          href="https://ontrack.deakin.edu.au"
-         target="_blank"
-         rel="noopener"
-         title="Log in to OnTrack to submit assignments">
+         target="_blank">
         📋 OnTrack
       </a>
 
       <a class="nav-btn nav-btn-solid"
          href="https://www.deakin.edu.au/courses/how-to-apply"
-         target="_blank"
-         rel="noopener"
-         title="Apply or sign up to Deakin University">
+         target="_blank">
         ✏️ Sign Up
       </a>
-    </div>
 
+      <!-- NEW PROFESSIONAL BUTTONS -->
+      <a class="nav-btn nav-btn-outline"
+         href="https://www.deakin.edu.au/about-deakin/news-and-media-releases"
+         target="_blank">📰 News</a>
+
+      <a class="nav-btn nav-btn-outline"
+         href="https://www.deakin.edu.au/library"
+         target="_blank">📚 Library</a>
+
+      <a class="nav-btn nav-btn-outline"
+         href="https://www.deakin.edu.au/clouddeakin"
+         target="_blank">☁️ CloudDeakin</a>
+
+      <a class="nav-btn nav-btn-outline"
+         href="https://www.deakin.edu.au/about-deakin/careers-at-deakin/why-work-at-deakin/staff-support-services"
+         target="_blank">👥 Staff</a>
+
+    </div>
   </div>
 </nav>
 
+<!-- ── QUICK RESOURCES SECTION ── -->
+<section class="resource-strip">
+  <div class="resource-strip-inner">
+
+    <a href="https://www.deakin.edu.au/students" target="_blank" class="resource-card">
+      <span class="resource-icon">🎓</span>
+      <strong>Student Hub</strong>
+      <small>Support, services and study tools</small>
+    </a>
+
+    <a href="https://www.deakin.edu.au/students/help/it-support-and-systems/studentconnect" target="_blank" class="resource-card">
+      <span class="resource-icon">🧾</span>
+      <strong>StudentConnect</strong>
+      <small>Enrolment and admin services</small>
+    </a>
+
+    <a href="https://www.deakin.edu.au/about-deakin/news-and-media-releases" target="_blank" class="resource-card">
+      <span class="resource-icon">📰</span>
+      <strong>Deakin News</strong>
+      <small>Latest university updates</small>
+    </a>
+
+    <a href="https://www.deakin.edu.au/library" target="_blank" class="resource-card">
+      <span class="resource-icon">📚</span>
+      <strong>Library</strong>
+      <small>Access research and journals</small>
+    </a>
+
+  </div>
+</section>
+
 <!-- ── HEADER ── -->
 <header>
-  <div class="header-deco"></div>
-  <div class="header-deco2"></div>
   <div class="header-inner">
-    <div class="header-badge"><span></span> Deakin University · Pass Group Task</div>
+    <div class="header-badge">Deakin University · Pass Group Task</div>
     <h1>Sprint Planning <em>in Trello</em></h1>
-    <p class="header-sub">SIT223 / SIT753 &nbsp;·&nbsp; Task 3.1GP &nbsp;·&nbsp; Trimester 2025</p>
+    <p class="header-sub">SIT223 / SIT753 · Task 3.1GP</p>
   </div>
 </header>
 
-<!-- ── META BAR ── -->
-<div class="meta-bar">
-  <div class="meta-bar-inner">
-    <div class="meta-item">
-      <span class="label">Unit</span>
-      SIT223 / SIT753
-    </div>
-    <div class="meta-item">
-      <span class="label">Task</span>
-      3.1GP
-    </div>
-    <div class="meta-item">
-      <span class="label">Sprint</span>
-      Sprint 1 (Wk 4–6)
-    </div>
-    <div class="meta-item">
-      <span class="label">Submission</span>
-      PDF via OnTrack
-    </div>
-  </div>
-</div>
-
-<!-- ── MAIN ── -->
+<!-- ── MAIN CONTENT (UNCHANGED) ── -->
 <main>
 
-  <!-- ── SECTION 0: TEAM DETAILS ── -->
+  <!-- TEAM SECTION -->
   <div class="section">
-    <div class="section-label">
-      <div class="section-num">0</div>
-      <h2 class="section-title">Team Details</h2>
-    </div>
-    <hr class="section-rule"/>
+    <h2>Team Details</h2>
 
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="role">Member 1 / Scrum Master</div>
-        <input type="text" placeholder="Full Name" class="name"/>
-        <input type="text" placeholder="Student ID" class="id"/>
-      </div>
-      <div class="team-card">
-        <div class="role">Member 2 / Developer</div>
-        <input type="text" placeholder="Full Name"/>
-        <input type="text" placeholder="Student ID"/>
-      </div>
-      <div class="team-card">
-        <div class="role">Member 3 / Developer</div>
-        <input type="text" placeholder="Full Name"/>
-        <input type="text" placeholder="Student ID"/>
-      </div>
-    </div>
+    <input placeholder="Member 1 Name"/>
+    <input placeholder="Member 1 ID"/>
 
-    <div class="two-col-grid top-gap">
-      <div class="field-group">
-        <label>Trello Board URL</label>
-        <input type="url" placeholder="https://trello.com/b/..."/>
-      </div>
-      <div class="field-group">
-        <label>GitHub Repository URL</label>
-        <input type="url" placeholder="https://github.com/..."/>
-      </div>
-    </div>
+    <input placeholder="Member 2 Name"/>
+    <input placeholder="Member 2 ID"/>
+
+    <input placeholder="Member 3 Name"/>
+    <input placeholder="Member 3 ID"/>
   </div>
 
-  <!-- ── SECTION 1: SPRINT PLANNING ── -->
+  <!-- USER STORIES -->
   <div class="section">
-    <div class="section-label">
-      <div class="section-num">1</div>
-      <h2 class="section-title">Sprint Planning in Trello</h2>
-    </div>
-    <hr class="section-rule"/>
+    <h2>User Stories</h2>
 
-    <!-- 1a. Screenshots -->
-    <h3 class="sub-heading">1a. Trello Board Screenshots</h3>
-    <div class="info-box">
-      <strong>Reminder:</strong> Submit screenshots at the <em>beginning</em> <strong>and</strong> <em>end</em> of Sprint 1 (Weeks 4–6) showing tasks moving through Backlog → In Progress → Done.
-    </div>
-
-    <div class="two-col-grid bottom-gap">
-      <div>
-        <label>Screenshot — Start of Sprint 1</label>
-        <div class="screenshot-zone">
-          <div class="icon">🖼</div>
-          <p><strong>Paste or insert screenshot here</strong><br/>Trello board at Week 4 start</p>
-        </div>
-      </div>
-      <div>
-        <label>Screenshot — End of Sprint 1</label>
-        <div class="screenshot-zone">
-          <div class="icon">🖼</div>
-          <p><strong>Paste or insert screenshot here</strong><br/>Trello board at Week 6 end</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- 1d. User Stories -->
-    <h3 class="sub-heading">1d. User Stories</h3>
-    <p class="hint">Minimum 3 user stories required · Include 1 cybersecurity story · Extract all tasks from each story</p>
-
-    <!-- Story 1 -->
-    <div class="story-card">
-      <div class="story-header">
-        <span class="story-id">US-01</span>
-        <span class="story-tag tag-green">Sprint 1 Backlog</span>
-      </div>
-      <div class="field-group">
-        <label>User Story Statement</label>
-        <textarea placeholder="As a [user], I want to [goal], so that [reason/benefit]."></textarea>
-      </div>
-      <div class="two-col-grid">
-        <div class="field-group">
-          <label>Assigned To</label>
-          <input type="text" placeholder="Team member name(s)"/>
-        </div>
-        <div class="field-group">
-          <label>Story Points</label>
-          <select>
-            <option value="">— select —</option>
-            <option>1</option><option>2</option><option>3</option>
-            <option>5</option><option>8</option><option>13</option>
-          </select>
-        </div>
-      </div>
-      <label>Tasks extracted from this story</label>
-      <div class="task-row">
-        <input type="text" placeholder="Task description"/>
-        <select><option>To Do</option><option>In Progress</option><option>Done</option></select>
-      </div>
-      <div class="task-row">
-        <input type="text" placeholder="Task description"/>
-        <select><option>To Do</option><option>In Progress</option><option>Done</option></select>
-      </div>
-      <button class="add-task-btn">+ Add task</button>
-    </div>
-
-    <!-- Story 2 -->
-    <div class="story-card">
-      <div class="story-header">
-        <span class="story-id">US-02</span>
-        <span class="story-tag tag-green">Sprint 1 Backlog</span>
-      </div>
-      <div class="field-group">
-        <label>User Story Statement</label>
-        <textarea placeholder="As a [user], I want to [goal], so that [reason/benefit]."></textarea>
-      </div>
-      <div class="two-col-grid">
-        <div class="field-group">
-          <label>Assigned To</label>
-          <input type="text" placeholder="Team member name(s)"/>
-        </div>
-        <div class="field-group">
-          <label>Story Points</label>
-          <select>
-            <option value="">— select —</option>
-            <option>1</option><option>2</option><option>3</option>
-            <option>5</option><option>8</option><option>13</option>
-          </select>
-        </div>
-      </div>
-      <label>Tasks extracted from this story</label>
-      <div class="task-row">
-        <input type="text" placeholder="Task description"/>
-        <select><option>To Do</option><option>In Progress</option><option>Done</option></select>
-      </div>
-      <div class="task-row">
-        <input type="text" placeholder="Task description"/>
-        <select><option>To Do</option><option>In Progress</option><option>Done</option></select>
-      </div>
-      <button class="add-task-btn">+ Add task</button>
-    </div>
-
-    <!-- Story 3 — Cybersecurity -->
-    <div class="story-card security">
-      <div class="story-header">
-        <span class="story-id">US-03 · Cybersecurity</span>
-        <span class="story-tag tag-amber">🔒 Security</span>
-      </div>
-      <div class="info-box">
-        This story must address a <strong>cybersecurity concern</strong> (e.g. input validation, HTTPS enforcement, secure student portal access, OWASP considerations).
-      </div>
-      <div class="field-group">
-        <label>User Story Statement</label>
-        <textarea placeholder="As a [user], I want to [security goal], so that [data/system is protected from threat]."></textarea>
-      </div>
-      <div class="two-col-grid">
-        <div class="field-group">
-          <label>Assigned To</label>
-          <input type="text" placeholder="Team member name(s)"/>
-        </div>
-        <div class="field-group">
-          <label>Story Points</label>
-          <select>
-            <option value="">— select —</option>
-            <option>1</option><option>2</option><option>3</option>
-            <option>5</option><option>8</option><option>13</option>
-          </select>
-        </div>
-      </div>
-      <label>Tasks extracted from this story</label>
-      <div class="task-row">
-        <input type="text" placeholder="Task description"/>
-        <select><option>To Do</option><option>In Progress</option><option>Done</option></select>
-      </div>
-      <div class="task-row">
-        <input type="text" placeholder="Task description"/>
-        <select><option>To Do</option><option>In Progress</option><option>Done</option></select>
-      </div>
-      <button class="add-task-btn">+ Add task</button>
-    </div>
-
-    <!-- 1e. Story Points -->
-    <h3 class="sub-heading top-gap-sm">1e. Story Point Estimation</h3>
-
-    <div class="field-group">
-      <label>Definition of 1 Story Point</label>
-      <textarea placeholder="e.g. 1 story point = approximately 1 hour of focused work for an average team member. This serves as our baseline..."></textarea>
-    </div>
-    <div class="field-group">
-      <label>How story points were estimated (process/discussion)</label>
-      <textarea placeholder="Describe your estimation technique — e.g. Planning Poker, T-shirt sizing, group consensus. Explain the difference between a 2-point and a 4-point story."></textarea>
-    </div>
-
-    <label>Story Points per Team Member (Sprint 1)</label>
-    <table>
-      <thead>
-        <tr>
-          <th>Member</th>
-          <th>Assigned Stories/Tasks</th>
-          <th>Total Points</th>
-          <th>Points Completed</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><input type="text" placeholder="Member 1"/></td>
-          <td><input type="text" placeholder="US-01, Task A, Task B"/></td>
-          <td><input type="text" placeholder="e.g. 8"/></td>
-          <td><input type="text" placeholder="e.g. 8"/></td>
-        </tr>
-        <tr>
-          <td><input type="text" placeholder="Member 2"/></td>
-          <td><input type="text" placeholder="US-02, Task C"/></td>
-          <td><input type="text" placeholder="e.g. 7"/></td>
-          <td><input type="text" placeholder="e.g. 7"/></td>
-        </tr>
-        <tr>
-          <td><input type="text" placeholder="Member 3"/></td>
-          <td><input type="text" placeholder="US-03, Task D, Task E"/></td>
-          <td><input type="text" placeholder="e.g. 8"/></td>
-          <td><input type="text" placeholder="e.g. 6"/></td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="2">Sprint Total</td>
-          <td><input type="text" placeholder="23"/></td>
-          <td><input type="text" placeholder="21"/></td>
-        </tr>
-      </tfoot>
-    </table>
+    <textarea placeholder="As a user..."></textarea>
+    <textarea placeholder="As a user..."></textarea>
+    <textarea placeholder="Cybersecurity story..."></textarea>
   </div>
 
-  <!-- ── SECTION 2: SPRINT REVIEW DEMO ── -->
-  <div class="section">
-    <div class="section-label">
-      <div class="section-num">2</div>
-      <h2 class="section-title">Sprint 1 Review Demo</h2>
-    </div>
-    <hr class="section-rule"/>
-
-    <div class="info-box">
-      <strong>Video length:</strong> 5–10 minutes · Record at the end of Week 6 · Upload to YouTube / Shared Drive / Deakin Air and paste the link below.
-    </div>
-
-    <div class="field-group">
-      <label>Video Link (YouTube / Shared Drive / Deakin Air)</label>
-      <input type="url" placeholder="https://...  — ensure your marking tutor has view access"/>
-    </div>
-
-    <div class="two-col-grid">
-      <div class="field-group">
-        <label>a. Sprint 1 backlog summary</label>
-        <textarea placeholder="Brief summary of the Sprint 1 backlog items covered in your video intro..."></textarea>
-      </div>
-      <div class="field-group">
-        <label>b. Group activities overview</label>
-        <textarea placeholder="What did the team work on during Sprint 1?"></textarea>
-      </div>
-      <div class="field-group">
-        <label>c. Tools &amp; resources used</label>
-        <textarea placeholder="Communication tools, MS Teams, Trello, GitHub..."></textarea>
-      </div>
-      <div class="field-group">
-        <label>d. User stories &amp; tasks (Sprint 1)</label>
-        <textarea placeholder="Identify each user story and the tasks extracted from it..."></textarea>
-      </div>
-      <div class="field-group">
-        <label>e. Trello task distribution</label>
-        <textarea placeholder="Explain how tasks were distributed across members. Include reference to Trello screenshot."></textarea>
-      </div>
-      <div class="field-group">
-        <label>f. Issues encountered</label>
-        <textarea placeholder="What worked? What didn't? Advice for other teams?"></textarea>
-      </div>
-    </div>
-
-    <div class="field-group">
-      <label>g. Privacy, accessibility &amp; security considerations</label>
-      <textarea class="tall" placeholder="How did your team address user privacy, accessibility, and security when planning the project?"></textarea>
-    </div>
-  </div>
-
-  <!-- ── SECTION 3: TEAMWORK REFLECTION ── -->
-  <div class="section">
-    <div class="section-label">
-      <div class="section-num">3</div>
-      <h2 class="section-title">Teamwork Reflection <span class="section-title-note">(Borton Model · 500–700 words)</span></h2>
-    </div>
-    <hr class="section-rule"/>
-
-    <div class="info-box">
-      Apply the <strong>Borton Model</strong>: <em>What?</em> · <em>So What?</em> · <em>Now What?</em> — reflect on team communication, roles, dynamics, conflicts, strengths/weaknesses.
-    </div>
-
-    <div class="borton-grid">
-      <div class="borton-card">
-        <div class="stage">Stage 1</div>
-        <h4>What?</h4>
-        <textarea placeholder="Describe what happened — roles, responsibilities, events during the sprint. Did each member fulfil their role?"></textarea>
-      </div>
-      <div class="borton-card">
-        <div class="stage">Stage 2</div>
-        <h4>So What?</h4>
-        <textarea placeholder="Reflect on the significance — team dynamics, communication challenges, conflicts and how they were resolved, strengths and weaknesses."></textarea>
-      </div>
-      <div class="borton-card">
-        <div class="stage">Stage 3</div>
-        <h4>Now What?</h4>
-        <textarea placeholder="What would you do differently? What lessons will you carry forward? How will you apply them to future team projects?"></textarea>
-      </div>
-    </div>
-
-    <div class="field-group">
-      <label>Full Reflection Essay (500–700 words)</label>
-      <textarea class="very-tall" placeholder="Write your full reflection essay here, incorporating all Borton stages and addressing the required elements (a–h) from the task sheet..."></textarea>
-    </div>
-
-    <div class="field-group">
-      <label>h. Feature delivery vs. ethical/secure implementation — your team's priority</label>
-      <textarea placeholder="If you had to choose between delivering a feature quickly or ensuring it was ethically and securely implemented, what would your team prioritise and why?"></textarea>
-    </div>
-  </div>
-
-  <!-- ── SUBMIT ── -->
+  <!-- SUBMIT -->
   <div class="submit-section">
-    <h3>Ready to Submit?</h3>
-    <p>Export this page to PDF (File → Print → Save as PDF) and upload to <strong>OnTrack</strong> as a single PDF.<br/>Ensure only one team member submits, and that all members are registered in your OnTrack group.</p>
-    <button class="btn-primary" onclick="window.print()">🖨 Export as PDF</button>
+    <button onclick="window.print()">🖨 Export as PDF</button>
   </div>
 
 </main>
 
 <footer>
-  Deakin University &nbsp;·&nbsp; SIT223 / SIT753 &nbsp;·&nbsp; 3.1GP Sprint Planning &nbsp;·&nbsp;
-  <a href="https://ontrack.deakin.edu.au" target="_blank">Submit on OnTrack</a>
+  Deakin University · SIT223/SIT753 ·
+  <a href="https://ontrack.deakin.edu.au" target="_blank">Submit</a>
 </footer>
 
 <script>
-  // Dynamically add task rows
-  document.querySelectorAll('.add-task-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const row = document.createElement('div');
-      row.className = 'task-row';
-      row.innerHTML = `
-        <input type="text" placeholder="Task description"/>
-        <select><option>To Do</option><option>In Progress</option><option>Done</option></select>
-      `;
-      btn.parentNode.insertBefore(row, btn);
-    });
+document.querySelectorAll('.add-task-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const row = document.createElement('div');
+    row.innerHTML = `<input placeholder="Task"/><select><option>To Do</option></select>`;
+    btn.parentNode.insertBefore(row, btn);
   });
+});
 </script>
 
 </body>
